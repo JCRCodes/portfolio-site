@@ -100,3 +100,23 @@ BEM naming convention for CSS classes
 
 Setup ready for responsive design and JavaScript toggle
 
+
+## 🕐 [13 May, 11:30 AM] – Added CSS Styling to Navbar
+
+### ✅ What I Did:
+- Added a global reset to my CSS file using the universal selector `*`.
+- Set a default font (`'Courier New'`) for a consistent typographic style.
+- Applied Flexbox layout to the `.navbar` to center content both horizontally and vertically.
+- Styled the navbar with:
+  - `background: #898888;` for a grey background
+  - `height: 80px;` to give it fixed height
+  - `font-size: 1.2rem;` to scale up text slightly
+  - `position: sticky; top: 0;` so the navbar sticks to the top when scrolling
+  - `z-index: 999;` so it layers above other content
+
+### 🧠 What I Learned:
+- How to reset default browser styles for a clean slate using `* { margin: 0; padding: 0; box-sizing: border-box; }`
+- How `display: flex`, `justify-content`, and `align-items` work to align items in a container
+- Why `sticky` positioning is useful for fixed navigation
+- How `z-index` prevents UI elements from being hidden underneath others
+
