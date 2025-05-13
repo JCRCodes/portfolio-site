@@ -1,122 +1,127 @@
-# Portfolio Website
+# 🌐 Portfolio Website
 
-I'm building this site as my personal developer portfolio. It'll showcase projects, alongside my existing and developing skills and experience. 
-
-## Features
-- Clean, responsive layout
-- Links to GitHub projects
-- Built with HTML, CSS, and JavaScript
-
-More info coming soon!
-
-
-## Build Steps 
-
-# 🛠️ Personal Project Tutorial Log – Navbar Build
-
-This is a step-by-step log of building the navigation bar for my website. It includes what I did, how I did it, and why certain coding conventions were used (like double underscores, hashtags, timestamps, and Tab indentation). This is for my own understanding and to repeat the process confidently in future projects.
+This is my personal developer portfolio site, built from scratch using HTML, CSS, and JavaScript. The purpose of this project is to practice fundamental web development skills and create a clean, responsive portfolio that showcases my work, skills, and learning progress.
 
 ---
 
-## 🕐 [12 May, 10:30 AM] – Project Setup
+## Features So Far
 
-### ✅ What I did:
-- Created a new folder and opened it in Visual Studio Code.
-- Created `index.html`, `style.css`, and `script.js` files.
-- Opened the Live Server extension to preview my work in real time.
-
----
-
-## 🕐 [12 May, 10:45 AM] – Basic HTML Layout
-
-### ✅ What I did:
-- Typed out basic HTML boilerplate using `! + Tab` shortcut in VS Code.
-- Added `<nav>` tag to create a semantic navigation section.
-- Created a container `<div>` inside the nav.
-
-### 💡 Why:
-- Using semantic tags like `<nav>` improves accessibility and makes the purpose of sections clear to developers and screen readers.
+- Responsive navigation bar
+- Semantic HTML structure
+- Gradient-styled logo
+- CSS structured using BEM (Block Element Modifier) naming convention
+- Clean layout with Flexbox
+- Git version control and incremental commits
 
 ---
 
-## 🕐 [12 May, 11:00 AM] – Building the Navbar
+## Tech Stack
 
-### ✅ What I did:
-- Added a logo using:
+- HTML5
+- CSS3 (Flexbox, Gradients, Responsive Layout)
+- JavaScript (planned)
+- Git & GitHub
+
+---
+
+## Project Setup
+
+- Created a new project folder in VS Code
+- Files: `index.html`, `style.css`, `script.js`
+- Live preview using Live Server extension
+
+---
+
+## Build Log
+
+### [12 May, 10:45 AM] – Basic HTML Layout
+
+- Used `! + Tab` in VS Code to generate HTML boilerplate
+- Added `<nav>` element with semantic structure
+- Inserted a `<div>` container inside the nav
+- Applied BEM naming to prepare for organized CSS
+
+### [12 May, 11:00 AM] – Navigation Bar Structure
+
+- Added logo with:
   ```html
   <a href="/" id="navbar__logo">NEXT</a>
+Added mobile menu toggle (hamburger icon):
 
-I then added a mobile menu toggle using:
+html
+Copy
+Edit
 <div class="navbar__toggle" id="mobile-menu">
   <span class="bar"></span>
   <span class="bar"></span>
   <span class="bar"></span>
 </div>
 
-Created a list of nav links:
-<ul class="navbar__menu">
-  <li class="navbar__item">
-    <a href="" class="navbar__links">Link</a>
-  </li>
-</ul>
+Added a list of navigation links using <ul> and <li>
 
-The <a> tag creates a clickable link (logo in this case).
+Began using BEM naming (e.g. navbar__container, navbar__menu, etc.)
 
-The three <span class="bar"> elements make the hamburger menu icon for mobile view.
+### [13 May, 11:30 AM] – CSS Setup and Navbar Styling
 
-Using a <ul> and <li> structure is best practice for navigation menus.
+Added global CSS reset:
 
-I used BEM (Block Element Modifier) naming convention for CSS class names.
+css
+Copy
+Edit
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+Styled .navbar:
 
-Example:
+Set height, background color, and Flexbox alignment
 
-navbar → the main block
+Used position: sticky and z-index to keep navbar fixed and layered above other content
 
-navbar__container → an element inside navbar
+## Navbar Logo Styling
 
-navbar__toggle, navbar__menu, navbar__links etc.
+[13 May, later] – Styled the Logo with Gradient Text
+Replaced id="navbar__logo" with class="navbar__logo" to follow BEM convention
 
-## Why:
+Applied a linear gradient background clipped to text for visual impact
 
-Keeps code organized and scalable
-
-Makes it clear where each style belongs
-
-Prevents naming conflicts as the site grows
-
-When I use id="navbar__logo" in HTML, I can target it in CSS using:
-
-#navbar__logo {
-  font-size: 1.5rem;
+css
+Copy
+Edit
+.navbar__logo {
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0804 0%, #ffb199 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
 }
 
+## Why I Made the Change
 
-### ✅ What I've Built So Far (Summary)
-A semantic navigation bar with a logo and mobile menu
+IDs (#) should be unique and are not reusable
 
-Structured and indented HTML using Tab
+BEM and class-based styling (.) are more flexible and scalable
 
-BEM naming convention for CSS classes
+Using .navbar__logo keeps naming consistent with the rest of the layout
 
-Setup ready for responsive design and JavaScript toggle
+## What I've Learned So Far
 
+Semantic HTML improves accessibility and structure
 
-## 🕐 [13 May, 11:30 AM] – Added CSS Styling to Navbar
+Flexbox is a powerful tool for aligning and spacing content
 
-### ✅ What I Did:
-- Added a global reset to my CSS file using the universal selector `*`.
-- Set a default font (`'Courier New'`) for a consistent typographic style.
-- Applied Flexbox layout to the `.navbar` to center content both horizontally and vertically.
-- Styled the navbar with:
-  - `background: #898888;` for a grey background
-  - `height: 80px;` to give it fixed height
-  - `font-size: 1.2rem;` to scale up text slightly
-  - `position: sticky; top: 0;` so the navbar sticks to the top when scrolling
-  - `z-index: 999;` so it layers above other content
+BEM naming helps organize and scale CSS
 
-### 🧠 What I Learned:
-- How to reset default browser styles for a clean slate using `* { margin: 0; padding: 0; box-sizing: border-box; }`
-- How `display: flex`, `justify-content`, and `align-items` work to align items in a container
-- Why `sticky` positioning is useful for fixed navigation
-- How `z-index` prevents UI elements from being hidden underneath others
+Gradient text effects using background-clip and text-fill-color
+
+The importance of committing meaningful changes using Git
 
