@@ -6,7 +6,7 @@
 }
 
 .navbar {
-  background: #898888;
+  background: #000000;
 height: 80px;
 display: flex;
 justify-content: center;
@@ -91,7 +91,18 @@ height: 80px;
   border-radius: 4px;
   background: #f77062;
   color: #fff;
-
 }
+
+.button:hover {
+  background: #4837ff;
+  transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+  color: #f77062;
+  transition: all 0.3s ease;
+}
+
+
 
 
