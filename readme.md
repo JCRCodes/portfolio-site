@@ -125,3 +125,39 @@ Gradient text effects using background-clip and text-fill-color
 
 The importance of committing meaningful changes using Git
 
+
+### [16 May] – Navbar Styling Implementation
+
+
+Implemented a responsive navigation menu using Flexbox for horizontal alignment and spacing.
+
+.navbar__menu set up as a flex container to align items centrally.
+
+.navbar__item given a fixed height of 80px for consistent vertical spacing.
+
+.navbar__links styled to:
+
+Use full height and padding for a larger click target
+
+Center content both vertically and horizontally
+
+Transition to a highlight color (#f77062) on hover for interactivity
+
+Button Design
+Created a .button class with:
+
+Centered content using Flexbox
+
+Full height and width for a uniform clickable area
+
+Rounded corners and no outline or border
+
+Default background color of #f77062 with a smooth hover transition to #4837ff
+
+Buttons wrapped in .navbar__btn to ensure alignment within the navbar layout
+
+Icon Spacing
+Applied a right margin (0.5rem) to .fa-gem to create visual separation from adjacent text or elements
+
+
+
