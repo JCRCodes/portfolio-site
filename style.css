@@ -29,8 +29,8 @@ z-index: 999;
 }
 
 .navbar__logo {
-  background-color: #3448a1;
-  background-image: linear-gradient(to top, #1b0a0a 0%, #ffb199 100%);
+  background-color: #ffffff;
+  
   background-size: 100%;
   background-clip: text;
 -webkit-background-clip: text;
@@ -114,22 +114,4 @@ height: 80px;
     padding: 0;
   }
 
-  .navbar__menu {
-    display: grid;
-    grid-template columns: auto;
-    margin: 0;
-    width: 100%;
-    position: absolute;
-    top: -1000px;
-    opacity: 0;
-    transition: all 0.3s ease;
-    height: 50vh;
-    z-index: -1;
-    
-
-
-
-  }
 }
-
-
